@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício HTML</title>
+
+    <!-- CSS básico para deixar bonito -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Estilo da tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= LISTA ================= -->
+    <h1>Lista de Tarefas</h1>
+
+    <!-- Lista principal -->
+    <ul>
+        <li>Estudar programação</li>
+        <li>Ir para academia</li>
+        <li>Fazer almoço</li>
+
+        <!-- Item com sublista -->
+        <li>Estudar HTML
+            <ul>
+                <li>Revisar tags</li>
+                <li>Fazer exercícios</li>
+                <li>Praticar no VSCode</li>
+            </ul>
+        </li>
+
+        <li>Dormir cedo</li>
+    </ul>
+
+    <!-- ================= TABELA ================= -->
+    <h1>Tabela de Alunos</h1>
+
+    <table>
+
+        <!-- Título da tabela -->
+        <caption>Notas dos Alunos - 2024</caption>
+
+        <!-- Cabeçalho -->
+        <tr>
+            <th>Nome do Aluno</th>
+            <th>Disciplina 1</th>
+            <th>Disciplina 2</th>
+            <th>Disciplina 3</th>
+            <th>Média</th>
+        </tr>
+
+        <!-- Aluno 1 -->
+        <tr>
+            <td>João</td>
+            <td>8</td>
+            <td>7</td>
+            <td>9</td>
+            <td>8</td>
+        </tr>
+
+        <!-- Aluno 2 -->
+        <tr>
+            <td>Maria</td>
+            <td>9</td>
+            <td>8</td>
+            <td>10</td>
+            <td>9</td>
+        </tr>
+
+        <!-- Exemplo usando ROWSPAN -->
+        <tr>
+            <td rowspan="2">Carlos</td>
+            <td>7</td>
+            <td>6</td>
+            <td>8</td>
+            <td>7</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>7</td>
+            <td>6.6</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

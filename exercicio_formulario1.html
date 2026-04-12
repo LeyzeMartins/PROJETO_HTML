@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Informa ao navegador que este documento é HTML5 -->
+
+<html lang="pt-BR">
+<!-- Tag principal da página -->
+<head>
+    <!-- HEAD = configurações da página -->
+
+    <meta charset="UTF-8">
+    <!-- Permite usar acentos e caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajuda a página a se ajustar em telas menores -->
+
+    <title>Atividade 1 - Formulário de Contato</title>
+    <!-- Texto que aparece na aba do navegador -->
+
+    <style>
+        /* BODY = fundo geral da página */
+        body{
+            background-color: #0f172a;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* .formulario = caixa principal do formulário */
+        .formulario{
+            background-color: #1e293b;
+            width: 420px;
+            padding: 25px;
+            border: 2px solid #334155;
+            border-radius: 15px;
+            margin: auto;
+        }
+
+        /* H2 = título do formulário */
+        h2{
+            background-color: #7c3aed;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* LABEL = nome dos campos */
+        label{
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        /* INPUT e TEXTAREA = campos onde a pessoa digita */
+        input,
+        textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #94a3b8;
+            border-radius: 10px;
+            background-color: #f8fafc;
+            color: #111827;
+            box-sizing: border-box;
+        }
+
+        /* PLACEHOLDER = texto de dica dentro do campo */
+        input::placeholder,
+        textarea::placeholder{
+            color: #9ca3af;
+        }
+
+        /* TEXTAREA = caixa maior de mensagem */
+        textarea{
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* BOTÃO */
+        button{
+            background-color: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-top: 18px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        /* Efeito quando passa o mouse no botão */
+        button:hover{
+            background-color: #6d28d9;
+        }
+
+        /* Mensagens de erro em vermelho */
+        .erro{
+            color: #ef4444;
+            font-size: 14px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+
+        /* Ajuste simples para telas menores */
+        @media (max-width: 500px){
+            .formulario{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BODY = tudo que aparece na página -->
+
+    <form class="formulario">
+        <!-- FORM = cria o formulário -->
+
+        <h2>Formulário de Contato</h2>
+        <!-- Título principal -->
+
+        <label for="nome">Nome</label>
+        <!-- LABEL = nome do campo -->
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        <!-- INPUT type="text" = campo de texto -->
+        <p class="erro">Campo obrigatório.</p>
+        <!-- Mensagem de erro em vermelho -->
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email">
+        <!-- type="email" = campo próprio para email -->
+        <p class="erro">Digite um email válido.</p>
+
+        <label for="assunto">Assunto</label>
+        <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto">
+        <p class="erro">Preencha o assunto.</p>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+        <!-- TEXTAREA = campo maior para textos -->
+        <p class="erro">Escreva sua mensagem.</p>
+
+        <button type="submit">Enviar</button>
+        <!-- BUTTON = botão do formulário -->
+    </form>
+
+</body>
+</html>

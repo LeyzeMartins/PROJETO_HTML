@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Diz ao navegador que este documento é HTML5 -->
+
+<html lang="pt-BR">
+<!-- Tag principal da página.
+lang="pt-BR" informa que o idioma da página é português do Brasil -->
+
+<head>
+<!-- HEAD = cabeça da página.
+Aqui ficam as configurações, título da aba, metadados e CSS.
+Normalmente o que está no head não aparece diretamente no site. -->
+
+<meta charset="UTF-8">
+<!-- Define o padrão de caracteres da página.
+Serve para aceitar acentos, ç, símbolos e emojis corretamente -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Faz a página se adaptar melhor a celular, tablet e diferentes tamanhos de tela -->
+
+<title>Formulario no HTML</title>
+<!-- Texto que aparece na aba do navegador -->
+
+<style>
+/* STYLE = onde escrevemos CSS dentro do próprio HTML
+CSS serve para mudar aparência, cor, tamanho, espaçamento e layout */
+
+/* BODY = corpo da página inteira
+Aqui estamos mudando a cor de fundo do site todo */
+body{
+    background-color: beige;
+}
+
+/* H2 = título de nível 2
+Nesse caso é o título "Registro" */
+h2{
+    color: white; /* cor do texto */
+    background-color: blueviolet; /* cor de fundo do título */
+    padding: 10px; /* espaço interno entre o texto e a borda */
+}
+
+/* .formulario = classe do formulário
+O ponto indica que é uma classe no CSS
+Essa classe está sendo usada na tag <form class="formulario"> */
+.formulario{
+    border: 1px solid lightgray; /* borda cinza clara ao redor do formulário */
+    padding: 20px; /* espaço interno da caixa */
+    width: 420px; /* largura da caixa do formulário */
+    background-color: lightgray; /* cor de fundo da caixa */
+}
+
+/* LABEL = texto que identifica o campo
+Exemplo: Nome, Senha, Telefone */
+label{
+    color: black; /* cor do texto */
+    font-weight: bold; /* deixa o texto em negrito */
+}
+
+/* Aqui estamos estilizando somente:
+   - input de texto
+   - input de senha
+   - textarea
+Isso serve para as caixas de digitação ficarem bonitas */
+input[type="text"],
+input[type="password"],
+textarea{
+    width: 280px; /* largura do campo */
+    padding: 10px; /* espaço interno */
+    margin: 5px; /* espaço externo entre um campo e outro */
+    border: 1px solid rgb(118, 186, 144); /* borda verde clara */
+    border-radius: 20px; /* deixa as bordas arredondadas */
+}
+
+/* TEXTAREA = campo maior de texto
+Aqui aumentamos a largura dela */
+textarea{
+    width: 90%;
+}
+
+/* BUTTON = botão de enviar/login */
+button{
+    width: 100px; /* largura do botão */
+    background-color: blueviolet; /* cor de fundo */
+    color: aliceblue; /* cor do texto */
+    padding: 10px; /* espaço interno do botão */
+    border-radius: 5px; /* arredonda os cantos */
+    display: block; /* faz o botão se comportar como bloco */
+    margin-left: auto; /* ajuda centralizar */
+    margin-right: auto; /* ajuda centralizar */
+}
+</style>
+
+</head>
+
+<body>
+<!-- BODY = corpo visível da página
+Tudo que o usuário vê no site fica aqui dentro -->
+
+<form class="formulario">
+<!-- FORM = cria o formulário
+Usamos class="formulario" para aplicar o CSS da classe .formulario -->
+
+<h2>Registro</h2>
+<!-- Título principal do formulário -->
+
+<label>Nome</label>
+<!-- LABEL = nome do campo -->
+<input type="text" placeholder="Digite o seu nome">
+<!-- INPUT = campo de entrada
+type="text" = campo de texto
+placeholder = texto de dica dentro da caixa -->
+<br>
+<!-- BR = quebra de linha -->
+
+<label>Senha</label>
+<input type="password" placeholder="Digite sua senha">
+<!-- type="password" esconde os caracteres digitados -->
+<br>
+
+<label>Telefone</label>
+<input type="text" maxlength="11" pattern="[0-9]{11}" placeholder="Digite seu número" required>
+<!-- maxlength="11" = limita a 11 caracteres
+pattern="[0-9]{11}" = pede 11 números
+required = torna o campo obrigatório -->
+<br>
+
+<!-- BIOGRAFIA -->
+<label>Biografia</label>
+<br>
+<textarea rows="4" placeholder="Fale um pouco sobre você"></textarea>
+<!-- TEXTAREA = campo maior para textos longos
+rows="4" = altura com 4 linhas -->
+<br><br>
+
+<label>Escolha uma linguagem:</label>
+<br>
+
+<label><input type="radio" name="linguagem"> Java</label>
+<label><input type="radio" name="linguagem"> Python</label>
+<label><input type="radio" name="linguagem"> Ruby</label>
+<label><input type="radio" name="linguagem"> C#</label>
+<label><input type="radio" name="linguagem"> C++</label>
+<!-- RADIO = botão de escolha única
+Todos têm o mesmo name="linguagem"
+Por isso só pode marcar uma opção -->
+<br><br>
+
+<label>Quais tipos musicais você gosta?</label>
+<br>
+
+<label><input type="checkbox"> Rock</label>
+<label><input type="checkbox"> Forró</label>
+<label><input type="checkbox"> Eletrônica</label>
+<label><input type="checkbox"> Pagode</label>
+<!-- CHECKBOX = caixa de múltipla escolha
+Diferente do radio, permite marcar várias opções -->
+<br><br>
+
+<label for="Nacionalidades">Nacionalidades</label>
+
+<select name="Paises">
+<!-- SELECT = cria lista suspensa / caixinha de opções -->
+
+<option value=""></option>
+<!-- OPTION = opção da lista -->
+<option value="br">Brasil</option>
+<option value="fr">França</option>
+<option value="arg">Argentina</option>
+</select>
+
+<br><br>
+
+<button type="submit">Login</button>
+<!-- BUTTON = botão
+type="submit" = botão que envia o formulário -->
+
+</form>
+
+</body>
+</html>
