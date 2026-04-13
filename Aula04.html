@@ -8,33 +8,74 @@
 
     <!-- título da aba do navegador -->
     <title>Aula Java Script👌</title>
-    
 </head>
 
 <body>
 
   <!-- título principal da página -->
   <h1 id="titulo">Página com JavaScript</h1>
-
+ 
   <!-- segundo título (subtítulo) -->
   <h1 id="subtitulo">Seja bem vindo</h1>
+
+  <!-- minha biografia principal -->
   <p id="textoMinhaBiografia">
-         <b>Sou estudante de Ciência da Computação na Estácio e apaixonada por tecnologia.</b><br><br>
+    <b>Sou estudante de Ciência da Computação na Estácio e apaixonada por tecnologia.</b><br><br>
+    Estou em constante aprendizado, desenvolvendo minhas habilidades em programação.<br><br>
+    <b>Tenho como objetivo me tornar uma desenvolvedora full stack</b><br><br>
+    Estou sempre buscando evoluir e transformar conhecimento em prática.
+  </p>
 
-        Estou em constante aprendizado, desenvolvendo minhas habilidades em programação e dando os primeiros passos no desenvolvimento web.<br><br>
+  <!-- outros textos com class -->
+  <p class="textoMinhaBiografia">
+    Sou estudante de Ciência da Computação e apaixonada por tecnologia.<br><br>
+  </p>
 
-        <b>Tenho como objetivo me tornar uma desenvolvedora full stack</b> e também aprender Flutter para criar aplicações modernas e completas.<br><br>
+  <p class="textoMinhaBiografia">
+    Atualmente estou aprendendo HTML, CSS e JavaScript.<br><br>
+  </p>
 
-        Estou sempre buscando evoluir e transformar conhecimento em prática.
-     </p>
-  <!-- botão que chama a função para alterar cor e aumentar fonte -->
+  <!-- paragrafo com id -->
+  <p id="paragrafo1" class="texto">
+    Outro texto de teste<br><br>
+  </p>
+
+  <!-- ultimo paragrafo (o seu problema estava aqui) -->
+  <p class="texto1">
+    Atualmente estou aprendendo HTML, CSS, JavaScript e DOM.<br><br>
+  </p>
+
+  <!-- botão que chama a função -->
   <button onclick="mudarCorDaPagina()">Alterar</button>
 
-  <!-- botão que chama a função para resetar tudo -->
+  <!-- botão que reseta -->
   <button onclick="resetarCor()">Resetar</button>
 
-  <!-- aqui eu conecto meu arquivo JavaScript externo -->
+  <!-- aqui eu conecto o JS (AGORA NO LUGAR CERTO) -->
   <script src="javascript.js"></script>
-  <script> document.getElementById("textoMinhaBiografia").style.color="purple;"</script>
+
+  <!-- aqui eu faço testes direto no HTML -->
+  <script>
+
+    // aqui eu pego pelo id e mudo cor
+    document.getElementById("textoMinhaBiografia").style.color = "purple";
+
+    // aqui eu aumento o tamanho da fonte
+    document.getElementById("textoMinhaBiografia").style.fontSize = "18px";
+
+    // aqui eu pego pela class (primeiro elemento)
+    document.getElementsByClassName("textoMinhaBiografia")[0].style.color = "blue";
+
+    // aqui eu pego o segundo elemento da class
+    document.getElementsByClassName("textoMinhaBiografia")[1].style.color = "green";
+
+    // aqui eu uso querySelector com id (#)
+    document.querySelector("#paragrafo1").style.color = "grey";
+
+    // aqui eu uso querySelector com class (.)
+    document.querySelector(".texto1").style.color = "pink";
+
+  </script>
+
 </body>
 </html>
