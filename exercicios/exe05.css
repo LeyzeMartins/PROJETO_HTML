@@ -1,0 +1,21 @@
+/* aqui eu estilizo a caixa no estado inativo */
+.inativo {
+  background-color: lightgray;
+  color: black;
+  width: 320px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* aqui eu estilizo a caixa no estado ativo */
+.ativo {
+  background-color: lightgreen;
+  color: darkgreen;
+  width: 320px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}

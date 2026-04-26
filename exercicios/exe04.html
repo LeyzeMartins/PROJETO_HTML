@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- aqui eu defini o tipo de caracteres (acentos, etc) -->
+    <meta charset="UTF-8">
+
+    <!-- isso faz o site se adaptar ao celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- título da aba do navegador -->
+    <title>Exercício JavaScript aula 04</title>
+
+    <!-- aqui eu conecto o arquivo CSS -->
+    <link rel="stylesheet" href="exe04.css">
+</head>
+
+<body>
+
+    <!-- título principal da página -->
+    <h1>Exercício de JavaScript</h1>
+
+    <!-- parágrafo que será manipulado pelo JavaScript -->
+    <p id="paragrafo">
+        Manipulação do DOM com JavaScript.<br><br>
+
+        Neste exemplo, ao clicar no botão, o JavaScript altera o estilo do parágrafo,
+        mudando cor, fundo e tamanho da fonte.<br><br>
+
+        Com isso, aprendemos como interagir com elementos da página de forma dinâmica.
+    </p>
+
+    <!-- botão para alterar o estilo -->
+    <button onclick="mudarEstilo()">Alterar</button>
+
+    <!-- botão para voltar ao estilo original -->
+    <button onclick="voltarEstilo()">Voltar ao Padrão</button>
+
+    <!-- aqui eu conecto o arquivo JavaScript -->
+    <script src="exe04.js"></script>
+
+</body>
+
+</html>
